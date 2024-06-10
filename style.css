@@ -1,22 +1,20 @@
 body, html {
     padding: 0;
+    margin: 0;
     width: 100%;
     height: 100%;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: 1000;
-    margin: 0;
-    display: flex;
 }
 
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 200px;
-    height: 100%;   
+    height: 100%;
     background-color: #6F4E37;
     padding: 20px;
     box-sizing: border-box;
-    flex-shrink: 1;
-    display: flex;
-    flex-direction: column;
 }
 
 .sidebar-navigation a {
@@ -28,11 +26,11 @@ body, html {
 }
 
 .wrapper {
+    margin-left: 200px;
     display: flex;
     flex-direction: column;
     height: 100%;
     box-sizing: border-box;
-    width: calc(100% - 200px);
 }
 
 .header {
@@ -41,11 +39,10 @@ body, html {
     align-items: center;
     padding: 20px;
     background-color: #FED8B1;
-    flex-shrink: 0;
 }
 
-.header img {
-    width: 220px;
+.header .logo img {
+    width: 150px;
     height: auto;
 }
 
@@ -53,51 +50,48 @@ body, html {
     font-size: larger;
     margin-left: 15px;
     text-decoration: none;
-    color: whitesmoke;
+    color: #6F4E37;
 }
 
 .header-banner {
     text-align: center; 
-    padding: 0;
+    padding: 20px;
     background: url('https://www.guardianoffshore.com.au/wp-content/uploads/2015/03/banner-placeholder.jpg') no-repeat center center;
     background-size: cover;
-    flex-shrink: 0;
-    height: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: larger;
 }
 
-.intro-text-area {
-    font-size: large;
-    text-align: justify;
+.main-content {
     padding: 20px;
     background-color: white;
     flex-grow: 1;
-    flex-shrink: 0;
 }
 
-.intro-text-area p {
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-inline: 10%;
-}
-
-.boxes {
+.images-collage {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
-    padding: 20px 0;
-    background-color: whitesmoke;
-    flex-grow: 1;
-    flex-shrink: 0;
 }
 
-.box {
-    width: 32%;
-    background-color: whitesmoke;
-    padding: 20px;
+.image-box {
+    width: calc(33.333% - 20px);
     text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.box img {
+.image-box:nth-child(4), .image-box:nth-child(5) {
+    width: calc(50% - 20px);
+}
+
+.image-box img {
     width: 100%;
     height: auto;
 }
@@ -107,15 +101,4 @@ body, html {
     padding: 20px;
     color: white;
     background-color: #FED8B1;
-    flex-shrink: 0;
-}
-
-.background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: whitesmoke;
-    padding: 20px;
 }
