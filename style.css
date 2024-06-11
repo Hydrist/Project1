@@ -3,7 +3,8 @@ body, html {
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
 }
 
 .sidebar {
@@ -18,6 +19,7 @@ body, html {
 }
 
 .sidebar-navigation a {
+    font-family: "Roboto Slab", serif;
     font-size: larger;
     margin: 15px 0;
     text-decoration: none;
@@ -48,6 +50,7 @@ body, html {
 }
 
 .navigation a {
+    font-family: "Roboto Slab", serif;
     font-size: larger;
     margin-left: 15px;
     text-decoration: none;
@@ -89,7 +92,7 @@ body, html {
 
 .image-box {
     width: calc(33.333% - 20px);
-    text-align: center;
+    text-align: left;
     background-color: whitesmoke;
     padding: 10px;
     box-sizing: border-box;
@@ -104,9 +107,60 @@ body, html {
     height: auto;
 }
 
+.intro-text-area {
+    font-size: large;
+    text-align: justify;
+    padding-inline: 50px;
+    padding-top: 20px;
+    background-color: white;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
 .footer {
     text-align: center;
     padding: 20px;
     color: white;
     background-color: #4c2f1e;
+}
+
+.sidebar-navigation .svg-icon {
+    width: 1em;
+    height: auto;
+    vertical-align: middle;
+    fill: #c6a286 !important;
+}
+
+a {
+    position: relative;
+    color: #333; /* Default text color */
+    text-decoration: none; /* Remove underline by default */
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    width: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #c6a286; /* Color of the underline */
+    transition: width 0.3s; /* Smooth transition for width changes */
+}
+
+a:hover::before {
+    width: 100%; /* Full width for the underline on hover */
+}
+
+.roboto-slab {
+    font-family: "Roboto Slab", serif;
+    color: #4c2f1e;
+}
+
+.image-box p, b {
+    margin: 20px;
+}
+
+.larger {
+    font-size: larger;
 }
