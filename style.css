@@ -133,23 +133,23 @@ body, html {
 
 a {
     position: relative;
-    color: #333; /* Default text color */
-    text-decoration: none; /* Remove underline by default */
+    color: #333;
+    text-decoration: none; 
 }
 
 a::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Position the underline below the text */
+    bottom: -2px;
     left: 0;
     width: 0;
-    height: 2px; /* Height of the underline */
-    background-color: #c6a286; /* Color of the underline */
-    transition: width 0.3s; /* Smooth transition for width changes */
+    height: 2px;
+    background-color: #c6a286; 
+    transition: width 0.3s;
 }
 
 a:hover::before {
-    width: 100%; /* Full width for the underline on hover */
+    width: 100%;
 }
 
 .roboto-slab {
